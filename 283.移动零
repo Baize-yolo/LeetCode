@@ -1,0 +1,16 @@
+class Solution {
+    public void moveZeroes(int[] nums) {
+        // 定义两个指针
+        int zero = 0;
+        int nonZero = 0;
+        while(nonZero<nums.length){
+            if(nums[nonZero]!=0){
+                int temp=nums[zero];
+                nums[zero]=nums[nonZero];
+                nums[nonZero]=temp;
+                zero++;
+            }
+            nonZero++;
+        }
+    }
+}
